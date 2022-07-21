@@ -26,6 +26,7 @@ function App() {
         <Typography variant="h2" align='center'>Welcome To my Website</Typography>
         <br/>
         <LightSwitch m = {mode} func = {changeMode} />
+        <br/>
         <LinkButton url='https://www.linkedin.com/in/alexeygornovoi/' text='LinkedIn' icon={<LinkedIn />} />
         <br/>
         <LinkButton url='https://github.com/alexgornovoi' text='GitHub' icon={<GitHub />} />

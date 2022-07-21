@@ -23,7 +23,7 @@ function App() {
     <ThemeProvider theme = {mode? Themes.DarkTheme : Themes.LightTheme}>
       <CssBaseline enableColorScheme/>
       <Container maxWidth = "sm" >
-        <Typography variant="h2" align='center'>Welcome To my Website</Typography>
+        <Typography variant="h2" align='center'>Welcome To My Website</Typography>
         <br/>
         <LightSwitch m = {mode} func = {changeMode} />
         <br/>

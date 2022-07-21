@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import {ThemeProvider} from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import Themes from './lib/theme'
+import {Typography, Container} from '@mui/material'
+import LinkButton from './components/linkButton'
+import {LinkedIn, GitHub} from '@mui/icons-material'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme = {Themes.LightTheme}>
+      <CssBaseline enableColorScheme/>
+      <Container maxWidth = "sm" >
+        <Typography variant="h2" align='center'>Welcome To my Website</Typography>
+        <br/>
+        <LinkButton url='https://www.linkedin.com/in/alexeygornovoi/' text='LinkedIn' icon={<LinkedIn />} />
+        <br/>
+        <LinkButton url='https://github.com/alexgornovoi' text='GitHub' icon={<GitHub />} />
+        <br/>
+      </Container>
+    </ThemeProvider>
   );
 }
 

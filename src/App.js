@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react'
 import {ThemeProvider} from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import Themes from './lib/theme'
@@ -8,10 +8,17 @@ import {LinkedIn, GitHub} from '@mui/icons-material'
 import LightSwitch from './components/themeSwitch'
 
 function App() {
-  const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(localStorage.getItem('theme-mode') === 'true');
+
+  useEffect(() => {
+    localStorage.setItem('theme-mode', mode);
+  }, [mode]);
+  
   const changeMode = () => {
     setMode(!mode)
   }
+
+
   return (
     <ThemeProvider theme = {mode? Themes.DarkTheme : Themes.LightTheme}>
       <CssBaseline enableColorScheme/>

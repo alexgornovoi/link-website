@@ -22,16 +22,18 @@ function App() {
   return (
     <ThemeProvider theme = {mode? Themes.DarkTheme : Themes.LightTheme}>
       <CssBaseline enableColorScheme/>
-      <Container maxWidth = "sm" >
-        <Typography variant="h2" align='center'>Welcome To My Website</Typography>
-        <br/>
-        <LightSwitch m = {mode} func = {changeMode} />
-        <br/>
-        <LinkButton url='https://www.linkedin.com/in/alexeygornovoi/' text='LinkedIn' icon={<LinkedIn />} />
-        <br/>
-        <LinkButton url='https://github.com/alexgornovoi' text='GitHub' icon={<GitHub />} />
-        <br/>
-      </Container>
+      <div>
+        <Container maxWidth = "sm" >
+          <Typography variant="h2" align='center'>Welcome To My Website</Typography>
+          <br/>
+          <LightSwitch mode = {mode} func = {changeMode} />
+          <br/>
+          <LinkButton url='https://www.linkedin.com/in/alexeygornovoi/' text='LinkedIn' icon={<LinkedIn />} />
+          <br/>
+          <LinkButton url='https://github.com/alexgornovoi' text='GitHub' icon={<GitHub />} />
+          <br/>
+        </Container>
+      </div>
     </ThemeProvider>
   );
 }

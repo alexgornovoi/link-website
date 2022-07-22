@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Themes from './lib/theme'
 import {Typography, Container, AppBar, Toolbar} from '@mui/material'
 import LinkButton from './components/linkButton'
-import {LinkedIn, GitHub, Code } from '@mui/icons-material'
+import {LinkedIn, GitHub, Code, Web } from '@mui/icons-material'
 import LightSwitch from './components/themeSwitch'
 
 function App() {
@@ -37,6 +37,8 @@ function App() {
           <LinkButton url='https://github.com/alexgornovoi' text='GitHub' icon={<GitHub />} />
           <br/>
           <LinkButton url='https://leetcode.com/alexgornovoi/' text='LeetCode' icon = {<Code />} />
+          <br/>
+          <LinkButton url='https://alexgornovoi.com' text='Personnal Website' icon = {<Web />} off = {true} />
         </Container>
       </div>
     </ThemeProvider>

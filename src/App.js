@@ -28,8 +28,9 @@ function App() {
           minHeight="100vh"
         >
           <Container maxWidth='sm'>
-            <Box sx={{bgcolor: 'background.paper'}} display ="flex" alignItems="center" justifyContent="center" minHeight="80vh"> 
+            <Box sx={{bgcolor: 'background.paper'}} display ="flex" alignItems="center" justifyContent="center" minHeight="65vh"> 
               <Typography>hello</Typography>
+              <LightSwitch mode = {mode} func = {changeMode}/>
             </Box>
           </Container>
         </Box>

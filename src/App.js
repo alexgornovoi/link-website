@@ -38,7 +38,7 @@ function App() {
               justifyContent="center"
               minHeight="65vh"
             >
-              <Grow appear in timeout={1500}>
+              <Grow appear in timeout={1500} >
               <Stack spacing={2} alignItems="center">
                 <About/>
                 <LightSwitch mode={mode} func={changeMode} />

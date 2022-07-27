@@ -3,12 +3,11 @@ import { Button } from '@mui/material'
 import Themes from '../lib/theme';
 
 
-const LinkButton = ({ url, text, icon, off, mode }) => {
+const LinkButton = ({ url, text, icon, off }) => {
     return (
-        <ThemeProvider theme={{ mode } ? Themes.DarkTheme : Themes.LightTheme}>
             <Button
                 variant="outlined"
-                color="text.primary"
+                color="inherit"
                 startIcon={icon}
                 onClick={(e) => { e.preventDefault(); window.open(url, '_blank'); }}
                 style={{ justifyContent: "flex-start" }}
@@ -16,7 +15,6 @@ const LinkButton = ({ url, text, icon, off, mode }) => {
             >
                 {text}
             </Button>
-        </ThemeProvider>
     )
 }
 

@@ -8,7 +8,7 @@ const LinkButton = ({ url, text, icon, off, mode }) => {
         <ThemeProvider theme={{ mode } ? Themes.DarkTheme : Themes.LightTheme}>
             <Button
                 variant="outlined"
-                color="inherit"
+                color="text.primary"
                 startIcon={icon}
                 onClick={(e) => { e.preventDefault(); window.open(url, '_blank'); }}
                 style={{ justifyContent: "flex-start" }}

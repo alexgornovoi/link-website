@@ -1,9 +1,11 @@
 import { React, useState, useEffect } from 'react'
 import { ThemeProvider } from '@mui/material/styles'
 import Themes from './lib/theme'
-import LinkButton from './components/linkButton'
 import LightSwitch from './components/themeSwitch'
-import { CssBaseline, Typography, Container, Box } from '@mui/material'
+import { CssBaseline,  Container, Box, Stack } from '@mui/material'
+import Buttons from './components/buttons'
+import About from './components/about'
+
 
 function App() {
   const [mode, setMode] = useState(localStorage.getItem('theme-mode') === 'true');
@@ -28,9 +30,18 @@ function App() {
           minHeight="100vh"
         >
           <Container maxWidth='sm'>
-            <Box sx={{bgcolor: 'background.paper'}} display ="flex" alignItems="center" justifyContent="center" minHeight="65vh"> 
-              <Typography>hello</Typography>
-              <LightSwitch mode = {mode} func = {changeMode}/>
+            <Box
+              sx={{ bgcolor: 'background.paper' }}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              minHeight="65vh"
+            >
+              <Stack spacing={2} alignItems="center">
+                <About/>
+                <LightSwitch mode={mode} func={changeMode} />
+                <Buttons mode={mode} />
+              </Stack>
             </Box>
           </Container>
         </Box>

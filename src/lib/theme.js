@@ -17,11 +17,11 @@ const LightTheme = createTheme({
     palette: {
       mode: 'light',
       background: {
-        paper: '#C7F5C9',
-        default: '#D7F5D8'
+        paper: '#DFE8CC',
+        default: '#F7EDDB'
       },
       text: {
-        primary: '#0A1D0B',
+        primary: '#1A291B',
       },
     },
 });

@@ -1,7 +1,4 @@
-import { ThemeProvider } from '@emotion/react';
 import { Button } from '@mui/material'
-import Themes from '../lib/theme';
-
 
 const LinkButton = ({ url, text, icon, off }) => {
     return (
